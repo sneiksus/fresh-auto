@@ -1,0 +1,181 @@
+@font-face {  
+    font-family: Lato-bold;  
+    src: url(../fonts/Lato-Bold.ttf);
+   }
+ @font-face{
+    font-family: Lato-medium;  
+    src: url(../fonts/Lato-Medium.ttf);  
+   }
+
+@font-face{
+    font-family: Lato-regular;  
+    src: url(../fonts/Lato-Regular.ttf);
+   }
+
+ @font-face{
+    font-family: Lato-light;  
+    src: url(../fonts/Lato-Light.ttf);
+   }
+
+header{
+    height: 100px;
+    
+}
+
+.logo{
+    height: 70px;
+    width: 250px;
+    margin-top: 5px;
+}
+
+nav{
+    margin-top: 15px;
+   
+}
+
+nav a{
+    color: #414042;
+    margin-left: 30px;
+    font-size: 15px;
+    font-family: Lato-bold;  
+}
+
+.main-info{
+  height: 500px;
+  background-image: url(../images/main-pic-min.png);
+  background-size: 100%;
+}
+
+.first-header{
+    color: rgb(19, 81, 238);
+    font-size: 35px;
+    font-family: Lato-bold;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.main-descp{
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: Lato-medium;
+    color: rgb(0, 178, 238);
+    margin-left: 70px;
+}
+  
+.cars{
+    height: 1300px;
+}
+
+.second-header{
+   margin-top: 70px;
+   font-size: 23pt;
+   font-family: Lato-bold;
+  
+}
+
+.car-item{
+    margin-top: 70px;
+    height: 440px;
+    width: 350px;
+    background-color: rgb(219, 219, 219);
+}
+
+.car-img{
+    height: 278px;
+    width: 350px;
+    background-size: 100%;
+}
+
+.car-header{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-family: Lato-bold;
+    font-size: 17pt;
+}
+
+.car-description{
+    margin-top: 25px;
+    margin-left: 40px;
+    font-size: 13pt;
+    font-family: Lato-light;
+    color: #414042;
+}
+
+.details{
+   margin-top: 10px;
+   margin-left: 40px;
+   font-family: Lato-medium;
+   font-size: 13pt;
+   color: #414042;
+}
+
+.all-cars{
+    margin-top: 50px;
+    padding-top: 6px;
+    height: 50px;
+    width: 170px;
+    background-color: white;
+    border: 2px solid gray;
+    font-size: 16pt;
+    font-family: Lato-medium;
+    color: gray;
+    text-align: center;
+}
+
+.all-cars:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+.have-question{
+    height: 330px;
+    background: linear-gradient(to bottom, rgb(210,210,210), rgb(250,250,250));
+}
+
+.p-first{
+    font-family: Lato-bold;
+    margin-top: 70px;
+    color: rgb(105, 105, 105);
+    font-size: 23pt;
+}
+
+.p-second{
+    font-family: Lato-bold;
+    color: black;
+    font-size: 40pt;
+}
+
+.p-third{
+    font-family: Lato-bold;
+    color: rgb(105, 105, 105);
+    font-size: 23pt;
+}
+
+
+
+
+footer{
+    height: 400px;
+    background-color: black;
+}
+
+footer h4{
+    color: white;
+    font-size: 17pt;
+    font-family: Lato-medium;
+    margin-top: 80px;
+}
+footer p{
+    
+    font-family: Lato=regular;
+    font-size: 13pt;
+    color: white;
+    margin-top: 50px;
+}
+
+.pre{
+    white-space: pre;
+}
+
+.marg-l-40{
+    margin-left: 100px;
+}
