@@ -18,18 +18,29 @@
    }
 
 header{
-    height: 100px;
-    
+    height: 95px;
+    z-index: 1020; 
+    background-color: rgb(250, 250, 250);
+}
+
+.header {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	transition: all .3s ease;
+}
+.header.out {
+	transform: translateY(-100%);
 }
 
 .logo{
-    height: 70px;
-    width: 250px;
-    margin-top: 5px;
+    height: 75px;
+    width: 240px;
+    margin-top: 7px;
 }
 
 nav{
-    margin-top: 15px;
+    margin-top: 11px;
    
 }
 
@@ -40,7 +51,12 @@ nav a{
     font-family: Lato-bold;  
 }
 
+a:hover{
+    color: black;
+}
+
 .main-info{
+    margin-top: 95px;
   height: 500px;
   background-image: url(../images/main-pic-min.png);
   background-size: 100%;
@@ -63,7 +79,7 @@ nav a{
 }
   
 .cars{
-    height: 1300px;
+    height:auto;
 }
 
 .second-header{
@@ -75,8 +91,11 @@ nav a{
 
 .car-item{
     margin-top: 70px;
+    padding: 0px;
+    margin-left: 35px;
     height: 440px;
     width: 350px;
+    max-width: 350px;
     background-color: rgb(219, 219, 219);
 }
 
@@ -109,9 +128,14 @@ nav a{
    color: #414042;
 }
 
+.lf{
+    margin-left: 0px;
+}
+
 .all-cars{
     margin-top: 50px;
     padding-top: 6px;
+    margin-bottom: 60px;
     height: 50px;
     width: 170px;
     background-color: white;
@@ -127,7 +151,7 @@ nav a{
 }
 
 .have-question{
-    height: 330px;
+    height: auto;
     background: linear-gradient(to bottom, rgb(210,210,210), rgb(250,250,250));
 }
 
@@ -148,6 +172,7 @@ nav a{
     font-family: Lato-bold;
     color: rgb(105, 105, 105);
     font-size: 23pt;
+    margin-bottom: 60px;
 }
 
 
@@ -178,4 +203,227 @@ footer p{
 
 .marg-l-40{
     margin-left: 100px;
+}
+
+.fa{
+    color: white;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .p-second{
+        
+        font-size: 37pt;
+    }
+
+    .p-first{
+        font-size: 20pt;
+    }
+
+    .p-third{
+        font-size: 20pt;
+    }
+
+     .car-item{
+        margin-left: 35px;
+    }
+    .second-header{
+        font-size: 20pt;
+    }
+
+    .lrm{
+        margin-left: 60px;
+    }
+
+    .first-header{
+        margin-left: 0px;
+        font-size: 33px;
+    }
+    
+    nav a{
+        margin-left: 18px;
+    }
+
+    .car-item:nth-child(odd){
+        margin-left: 100px;
+    }
+    
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+   header{
+       height: 150px;
+   }
+    
+   nav{
+       margin-top: 25px;
+   }
+   nav a{
+       margin-left: 25px;
+       font-size: 18px;
+   }
+
+   .logo{
+        margin-left: 50%;
+       transform: translateX(-50%);
+   }
+
+   .first-header{
+    font-size: 32px;
+    margin-left: 340px;
+    margin-top: 100px;
+}
+
+.main-descp{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 340px;
+}
+
+.main-info{
+  height: 580px;
+}
+
+.car-item{
+    margin-left: 10px;
+    height: 450px;
+}
+
+.second-header{
+    margin-left: 35%;
+}
+
+.all-cars{
+    width: 250px;
+}
+
+.details{
+    font-size: 15pt;
+}
+
+.car-description{
+    font-size: 15pt;
+
+}
+
+.p-first{
+    margin-left: 27%;
+}
+
+.p-third{
+    margin-left: 36%;
+}
+
+.p-second{
+    margin-left: 12%;
+}
+
+footer{
+    height: auto;
+}
+
+footer p{
+    font-size: 16pt;
+}
+
+.marg-l-40{
+    margin-left: 0px;
+}
+
+footer h4{
+    margin-left: 0px;
+}
+}
+
+@media  (max-width: 767px) {
+    header{
+        height: 180px;
+    }
+     
+    nav{
+        margin-top: 25px;
+    }
+    nav a{
+        margin-left: 65px;
+        font-size: 18px;
+    }
+    nav a:last-child{
+        padding-top: 30px;
+        margin-left: 81px;
+        font-size: 18px;
+    }
+ 
+    .logo{
+         margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .main-info{
+        height: 600px;
+        margin-top: 125px;
+      background-image: none;
+      background-color: #292929;
+    }
+
+    .first-header{
+        margin-top: 90px;
+        margin-left: 18%;
+    }
+
+    .main-descp{
+        margin-top: 40px;
+        font-size: 25px;
+        margin-left: 10%;
+    }
+
+    .car-item{
+        margin-left: 17%;
+        height: 470px;
+    }
+    
+    .second-header{
+        margin-left: 27%;
+    }
+       
+    .details{
+        font-size: 17pt;
+    }
+    
+    .car-description{
+        font-size: 17pt;
+    
+    }
+
+    .all-cars{
+        width: 200px;
+        margin-left: 0px;
+    }
+
+    .p-first{
+        margin-left: 17%;
+    }
+
+    .p-third{
+        margin-left: 29%;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    footer p{
+        font-size: 16pt;
+    }
+    
+    .marg-l-40{
+        margin-left: 0px;
+    }
+    
+    footer h4{
+        margin-left: 0px;
+    }
+    
 }
