@@ -86,17 +86,26 @@ a:hover{
    margin-top: 70px;
    font-size: 23pt;
    font-family: Lato-bold;
-  
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .car-item{
     margin-top: 70px;
     padding: 0px;
-    margin-left: 35px;
+    margin-left: 30px;
     height: 440px;
     width: 350px;
     max-width: 350px;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(245, 245, 245);
+}
+
+.car-item:first-child{
+    margin-left: 0px;
+}
+
+.car-item:nth-child(4){
+    margin-left: 0px;
 }
 
 .car-img{
@@ -144,6 +153,8 @@ a:hover{
     font-family: Lato-medium;
     color: gray;
     text-align: center;
+    margin-left: -3%;
+
 }
 
 .all-cars:hover{
@@ -205,7 +216,7 @@ footer p{
     margin-left: 100px;
 }
 
-.fa{
+.f{
     color: white;
 }
 
@@ -427,3 +438,82 @@ footer h4{
     }
     
 }
+
+.contact{
+    height: 700px;
+}
+
+h2{
+    font-size: 17pt;
+    font-family: Lato-bold;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.contact-input{
+    background-color: rgb(240, 240, 240);
+    width: 400px;
+    height: 40px;
+    font-size: 13pt;
+    font-family: Lato-medium;
+    border: 0;
+    margin-top: 30px;
+    margin-left: 20px;
+    outline: none;
+    text-indent: 5px;
+}
+
+.msg-input{
+    height: 180px;
+    margin-top: 105px;
+    width: 630px;
+    font-size: 13pt;
+    font-family: Lato-medium;
+    border: 1px solid #3d72a4;
+    padding-left: 5px;
+    resize: none;
+}
+
+.msg-input::placeholder{
+    color: rgb(65,64,66);
+}
+
+.msg-input:focus{
+   
+    outline: none !important;
+}
+
+.send-msg{
+
+    height: 50px;
+    width: 170px;
+    background-color: #3d72a4;
+    color: white;
+    font-size: 17pt;
+    font-family: Lato-bold;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 20px;
+    margin-left: 80px;
+    
+}
+
+.send-msg:hover{
+    background-color: #0e52bf;
+    color: white;
+    text-decoration: none;
+}
+
+hr{
+    width: 100%;
+    margin-top: 25px;
+    color: rgb(65,64,66);
+}
+
+.p-info{
+    margin-left: 20px;
+    font-family: Lato-regular;
+    font-size: 12pt;
+    margin-top: 20px;
+}
+
