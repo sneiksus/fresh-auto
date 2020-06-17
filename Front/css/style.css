@@ -109,13 +109,13 @@ a:hover{
 }
 
 .car-img{
-    height: 278px;
+    height: 250px;
     width: 350px;
     background-size: 100%;
 }
 
 .car-header{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 40px;
     font-family: Lato-bold;
     font-size: 17pt;
@@ -130,7 +130,7 @@ a:hover{
 }
 
 .details{
-   margin-top: 10px;
+   margin-top: 70px;
    margin-left: 40px;
    font-family: Lato-medium;
    font-size: 13pt;
@@ -484,7 +484,6 @@ h2{
 }
 
 .send-msg{
-
     height: 50px;
     width: 170px;
     background-color: #3d72a4;
@@ -517,3 +516,67 @@ hr{
     margin-top: 20px;
 }
 
+.order{
+    height: 600px;
+    margin-top: 95px;
+}
+
+select{
+    background-color: rgb(240, 240, 240);
+    width: 400px;
+    height: 40px;
+    font-size: 13pt;
+    font-family: Lato-medium;
+    border: 0;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-indent: 5px;
+    color: rgb(137, 117, 117);
+}
+
+option{  
+    font-size: 13pt;
+    font-family: Lato-medium;
+}
+
+.send-order{
+    height: 50px;
+    width: 170px;
+    background-color: #3d72a4;
+    color: white;
+    font-size: 17pt;
+    font-family: Lato-bold;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.send-order:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.properties{
+    margin-top: 40px;
+}
+
+.prop-val{
+    display: inline-block;
+    font-size: 13pt;
+    font-family: Lato-light;
+    color: #414042;
+    margin-left: 30px;
+}
+
+.prop-val:first-child{
+    margin-left: 0px;
+}
+
+.fa{
+    color: rgb(19, 81, 238);
+}
+
+
+
+ 
