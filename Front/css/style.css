@@ -205,8 +205,8 @@ a:hover{
     margin-bottom: 60px;
     height: 50px;
     width: 170px;
-    background-color: white;
-    border: 2px solid #969696;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
     font-size: 16pt;
     font-family: Lato-medium;
     color: #969696;
@@ -684,5 +684,77 @@ option{
     margin-bottom: 30px;
 }
 
+.car-list{
+    height: 800px;
+    margin-top: 95px;
+    overflow-x: auto;
+}
+
+.sel{
+    background-color: white;
+    width: 270px;
+    height: 40px;
+    font-size: 13pt;
+    font-family: Lato-medium;
+    border: 1px solid #d3d3d3;
+    margin-top: 0px;
+    margin-left: 17px;
+    text-indent: 5px;
+    color: rgb(65,64,66);
+    
+}
+
+.opt{  
+    font-size: 13pt;
+    font-family: Lato-medium;
+}
+
+.param{
+    font-size: 15pt;
+    font-family: Lato-bold;
+    color: rgb(65,64,66);
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.slider{
+    margin-left: 20px;
+    width: 90%;
+}
+
+#select{
+    margin-left: 20px;
+    margin-top: 30px;
+    background-color: rgb(19, 81, 238);
+}
+
+#select:hover{
+     background-color: #0e52bf;
+}
+
+.menu{
+    position: absolute;
+
+    left: 13%;
+    top: 13%;
+    overflow-x: hidden;
+}
+
+.load-else{
+    right: 19%;
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+
+.sort{
+
+    height: 30px;
+    width: 150px;
+    margin-top: 30px;
+}
+
+.fr{
+    margin-top: 50px;
+}
 
  

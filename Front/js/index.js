@@ -34,3 +34,8 @@ $(function(){
 	  });
 	});
   });
+
+  $('.max-km').on('input', function () {
+	$(".max-km-view").text("Макс. пробіг: "+e.value);
+});
+	
