@@ -40,4 +40,6 @@ $(function(){
 });
 	
 
-
+$('.menubtn').bind('click', function(){
+	$( "#menubtn" ).show();
+});

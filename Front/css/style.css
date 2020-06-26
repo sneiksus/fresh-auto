@@ -229,12 +229,16 @@ a:hover{
     margin-top: 70px;
     color: rgb(105, 105, 105);
     font-size: 23pt;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .p-second{
     font-family: Lato-bold;
     color: black;
     font-size: 40pt;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .p-third{
@@ -242,6 +246,8 @@ a:hover{
     color: rgb(105, 105, 105);
     font-size: 23pt;
     margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -310,12 +316,19 @@ footer p{
         font-size: 33px;
     }
     
+    nav {
+        margin-left: -12px;
+    }
+
     nav a{
         margin-left: 18px;
     }
 
     .car-item:nth-child(odd){
         margin-left: 100px;
+    }
+    .car-item:nth-child(4){
+        margin-left: 35px;
     }
     
 }
@@ -329,9 +342,10 @@ footer p{
     
    nav{
        margin-top: 25px;
+       margin-left: 20px;
    }
    nav a{
-       margin-left: 25px;
+       margin-left: 38px;
        font-size: 18px;
    }
 
@@ -359,6 +373,18 @@ footer p{
 .car-item{
     margin-left: 10px;
     height: 450px;
+}
+
+.car-item:nth-child(3){
+    margin-left: 0px;
+}
+
+.car-item:nth-child(4){
+    margin-left: 10px;
+}
+
+.car-item:nth-child(5){
+    margin-left: 0px;
 }
 
 .second-header{
@@ -413,15 +439,16 @@ footer h4{
     }
      
     nav{
-        margin-top: 25px;
+        margin-top: 35px;
+        margin-left: -120px;
     }
     nav a{
-        margin-left: 65px;
+        margin-left: 37px;
         font-size: 18px;
     }
+
     nav a:last-child{
         padding-top: 30px;
-        margin-left: 81px;
         font-size: 18px;
     }
  
@@ -448,9 +475,26 @@ footer h4{
         margin-left: 10%;
     }
 
+    .second-header{
+         transform: translateX(0%);
+    }
+
     .car-item{
-        margin-left: 17%;
+        margin-left: auto;
+        margin-right: auto;
         height: 470px;
+    }
+
+    .car-item:nth-child(1){
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .car-item:nth-child(4){
+        margin-left: auto;
+        margin-right: auto;
+
     }
     
     .second-header{
@@ -496,6 +540,10 @@ footer h4{
     }
     
 }
+
+
+
+
 
 .contact{
     height: 700px;
@@ -574,6 +622,83 @@ hr{
     margin-top: 20px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+   h2{
+    margin-left: -10px;
+   }
+
+    .contact-input{
+        margin-left: -10px;
+        width: 360px;
+    }
+    .msg-input{
+        margin-left: 0px;
+        width: 550px;
+    }
+
+    .send-msg{
+        margin-left: 60px;
+    }
+    .p-info{
+        margin-left: -10px;
+        max-width: 400px;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .write{
+     margin-left: 270px
+    }
+ 
+     .contact-input{
+         margin-left: 170px;
+         width: 360px;
+     }
+     .msg-input{
+         margin-top: 70px;
+         margin-left: 80px;
+         width: 550px;
+     }
+ 
+     .send-msg{
+         margin-left:260px;
+     }
+     .p-info{
+         max-width: 700px;
+     }
+     .contact{
+        height: auto;
+    }
+ 
+ }
+ @media  (max-width: 767px) {
+     .msg-input{
+         width: 500px;
+         margin-left: 8px;
+        margin-top: 60px;
+     }
+     .write{
+        margin-left: 170px
+       }
+    
+        .contact-input{
+            margin-left: 75px;
+            width: 360px;
+        }    
+        .send-msg{
+            margin-left:165px;
+        }
+        .p-info{
+            max-width: 700px;
+        }
+        .contact{
+           height: auto;
+       }
+ }
+
+
+
+
 .order{
     height: 600px;
     margin-top: 95px;
@@ -614,6 +739,71 @@ option{
     color: white;
     text-decoration: none;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .auto-order{
+        margin-left: -50px;
+        transform: translateX(50px);
+    }
+    select{
+        margin-left: -10px;
+        width: 360px;
+    }
+
+    .send-order{
+        margin-left: 20px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .auto-order{
+        margin-top: 100px;
+        margin-left: 50%;
+        transform: translateX(-33%);
+    }
+    .order{
+        height: auto;
+    }
+    select{
+        margin-left: 170px;
+        width: 360px;
+    }
+
+    .send-order{
+        margin-left: 260px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media  (max-width: 767px) {
+    .auto-order{
+        margin-top: 100px;
+        margin-left: 50%;
+        transform: translateX(-45%);
+    }
+    .order{
+        height: auto;
+    }
+    select{
+        margin-left: 75px;
+        width: 360px;
+    }
+
+    .send-order{
+        margin-left: 165px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+
+
+
 
 .properties{
     margin-top: 50px;
@@ -668,12 +858,12 @@ option{
 
 .about-us{
     margin-top: 95px;
-    height: 300px;
+    height: 320px;
     background-color: rgb(245, 245, 245);
 }
 
 .about-us img{
-    height: 300px;
+    height: 320px;
     width: 100%;
     margin-left: -15px;
 }
@@ -683,6 +873,110 @@ option{
     margin-top: 40px;
     margin-bottom: 30px;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .about-us img{
+        width: 110%;
+        height: 350px;
+    }
+    .about-us-header{
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .about-us-p{
+        margin-left: 20px;
+        width: 100%;
+    }
+    .about-us{
+        margin-top: 95px;
+        height: 350px;
+    }
+
+    .our-services{
+        margin-left: -10%;
+        transform: translateX(10%);
+    }
+
+    .service-header{
+        margin-left: -10%;
+        transform: translateX(20%);
+    }
+    .service-icon{
+        margin-left: 0%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-us img{
+        display: none;
+    }
+    .about-us-header{
+        margin-left: 50%;
+        transform: translateX(-10%);
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .about-us-p{
+        margin-left: 5px;
+        width: 100%;
+    }
+    .about-us{
+        margin-top: 95px;
+        height: 320px;
+    }
+
+    .our-services{
+        margin-left: 50%;
+        transform: translateX(-27%);
+    }
+
+    .service-header{
+        margin-left: 50%;
+        transform: translateX(-20%);
+    }
+    .service-icon{
+        margin-left: 50%;
+    }
+}
+
+@media  (max-width: 767px) {
+    .about-us img{
+        display: none;
+    }
+    .about-us-header{
+        margin-left: 50%;
+        transform: translateX(-10%);
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .about-us-p{
+        margin-left: 5px;
+        width: 100%;
+    }
+    .about-us{
+        margin-top: 95px;
+        height: 350px;
+    }
+
+    .our-services{
+        margin-left: 48%;
+        transform: translateX(-27%);
+    }
+
+    .service-header{
+        margin-left: 50%;
+        transform: translateX(-20%);
+    }
+    .service-icon{
+        margin-left: 53%;
+    }
+}
+
+
+
+
+
 
 .car-list{
     height: 800px;
@@ -734,7 +1028,7 @@ option{
 
 .menu{
     position: absolute;
-
+     margin-left: -5%;
     left: 13%;
     top: 13%;
     overflow-x: hidden;
@@ -744,6 +1038,7 @@ option{
     right: 19%;
     background-color: rgb(240, 240, 240);
     border: none;
+    color: rgb(65,64,66);
 }
 
 .sort{
@@ -756,8 +1051,27 @@ option{
 .fr{
     margin-top: 50px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+    .menu{
+         display: none;
+         z-index: 1010;
+    }
+    .menubtn{
+        display: block;
+      }
+
+      .catalog-cars .car-item{
+          margin-right: -1000px;
+      }
+
+      .load-else{
+          margin-right: 7%;
+      }
+}
 
  
+
+
 
 .log-div{
   width: 300px;
@@ -832,4 +1146,8 @@ option{
 
 #add:hover{
     background-color: #0e52bf;
+}
+
+.menubtn{
+  display: none;
 }
