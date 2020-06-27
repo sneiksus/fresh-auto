@@ -592,7 +592,7 @@ h2{
 .send-msg{
     height: 50px;
     width: 170px;
-    background-color: #3d72a4;
+    background-color:#0e52bf;
     color: white;
     font-size: 17pt;
     font-family: Lato-bold;
@@ -604,7 +604,7 @@ h2{
 }
 
 .send-msg:hover{
-    background-color: #0e52bf;
+    background-color:  #3d72a4;
     color: white;
     text-decoration: none;
 }
@@ -725,7 +725,7 @@ option{
 .send-order{
     height: 50px;
     width: 170px;
-    background-color: #3d72a4;
+    background-color: #0e52bf;
     color: white;
     font-size: 17pt;
     font-family: Lato-bold;
@@ -736,6 +736,7 @@ option{
 }
 
 .send-order:hover{
+    background-color: #3d72a4;
     color: white;
     text-decoration: none;
 }
@@ -1019,18 +1020,18 @@ option{
 #select{
     margin-left: 20px;
     margin-top: 30px;
-    background-color: rgb(19, 81, 238);
+    background-color:#0e52bf;
 }
 
 #select:hover{
-     background-color: #0e52bf;
+     background-color: #3d72a4;
 }
 
 .menu{
     position: absolute;
      margin-left: -5%;
     left: 13%;
-    top: 13%;
+    top: 22%;
     overflow-x: hidden;
 }
 
@@ -1051,12 +1052,32 @@ option{
 .fr{
     margin-top: 50px;
 }
+#X{
+    display: none;
+}
+
+#menubtn{
+    display: none;
+    background-color: white;
+    border: 1px solid rgb(65,64,66);
+    width: 100px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 5%;
+    transform: translateY(20px);
+}
 @media (min-width: 992px) and (max-width: 1199px) {
     .menu{
          display: none;
          z-index: 1010;
+         background-color: rgb(250, 250, 250);
+         height: 800px;
+         margin-top: -52px;
+         margin-left: -13%;
+         
+         width: 320px;
     }
-    .menubtn{
+    #menubtn{
         display: block;
       }
 
@@ -1067,9 +1088,133 @@ option{
       .load-else{
           margin-right: 7%;
       }
+      .sort{
+        transform: translateY(-25px);
+          margin-top: 0px;
+      }
+      #select{
+          margin-bottom: -200px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .param{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #X{
+        display: inline;
+        margin-left: 90%;
+        
+    }
+    .slider{   
+        width: 85%;
+    }
+    .car-list .car-item{
+        margin-right: 40px;
+    }
+    .load-else{
+        right: 25%;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu{
+        display: none;
+        z-index: 1010;
+        background-color: rgb(250, 250, 250);
+        height: 748px;
+        margin-top: 2px;
+        margin-left: -13%;       
+        width: 320px;
+   }
+   #menubtn{
+       display: block;
+       transform: translateY(50px);
+     }
+
+     .catalog-cars .car-item{
+         margin-right: -1000px;
+     }
+
+     .sort{
+       transform: translateY(10px);
+         margin-top: 0px;
+     }
+     #select{
+         margin-bottom: 100px;
+       margin-left: 50%;
+       transform: translateX(-50%);
+   }
+
+   .param{
+       margin-top: 20px;
+       margin-bottom: 20px;
+   }
+
+   #X{
+       display: inline;
+       margin-left: 90%;
+       
+   }
+   .slider{   
+       width: 85%;
+   }
+   .load-else{
+       right: 32%;
+   }
+}
+
+@media  (max-width: 767px) {
+    .menu{
+        display: none;
+        z-index: 1010;
+        background-color: rgb(250, 250, 250);
+        height: 718px;
+        margin-top: 32px;
+        margin-left: -13%;       
+        width: 320px;
+   }
+   #menubtn{
+       display: block;
+       transform: translateY(50px);
+     }
+
+     .catalog-cars .car-item{
+         margin-right: -1000px;
+     }
+
+     .sort{
+       transform: translateY(10px);
+         margin-top: 0px;
+     }
+     #select{
+         margin-bottom: 100px;
+       margin-left: 50%;
+       transform: translateX(-50%);
+   }
+
+   .param{
+       margin-top: 20px;
+       margin-bottom: 20px;
+   }
+
+   #X{
+       display: inline;
+       margin-left: 90%;
+       
+   }
+   .slider{   
+       width: 85%;
+   }
+   .load-else{
+       right: 32%;
+   }
+}
  
+
+
 
 
 

@@ -40,6 +40,14 @@ $(function(){
 });
 	
 
-$('.menubtn').bind('click', function(){
-	$( "#menubtn" ).show();
-});
+$(document).ready(function() { 
+	$("#menubtn").click(function() { 
+		if($('#menu').is(":hidden"))
+		$("#menu").show(1000); 
+		else
+		$("#menu").hide(1000);
+	}); 
+	$("#X").click(function(){
+		$("#menu").hide(1000);
+	})
+}); 
