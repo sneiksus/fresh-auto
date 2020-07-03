@@ -28,6 +28,9 @@ namespace Back.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<string>("Role")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.HasKey("Id");
 
                     b.ToTable("Admins");
