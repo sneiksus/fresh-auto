@@ -58,33 +58,35 @@
  // отправка запроса к контроллеру ValuesController
  async function getData() {
      const token = sessionStorage.getItem(tokenKey);
-    //  $.ajax({
-    //         url: "https://localhost:44369/Auth/GetLogin",
-    //         type: "GET",
-    //        crossDomain: true,
-    //         headers: {"Authorization": 'Bearer' + token},
-    //         success: function (response) {
-    //             console.log(response);
-    //         }
-    //     });
+     $.ajax({
+            url: "https://localhost:44369/Auth/GetLogin",
+            type: "GET",
+           crossDomain: true,
+            headers: {"Authorization": 'Bearer ' + token,'Access-Control-Allow-Origin': '*',"Accept": "application/json",},
+            success: function (response) {
+                console.log(response);
+                document.getElementById("ct").innerHTML=response;
+            }
+        });
 
-     const response = await fetch("https://localhost:44369/Auth/getlogin", {
-         crossDomain: true,
-         method: "GET",
-         headers: {
-            'Access-Control-Allow-Origin': '*',
-             "Accept": "application/json",
-             "Authorization": "Bearer " + token  // передача токена в заголовке
-         }
-     });
+    //  const response = await fetch("https://localhost:44369/Auth/getlogin", {
+    //      crossDomain: true,
+    //      method: "GET",
+    //      headers: {
+    //         'Access-Control-Allow-Origin': '*',
+    //          "Accept": "application/json",
+    //          "Authorization": "Bearer " + token  // передача токена в заголовке
+    //      }
+    //  });
 
     
-     if (response.ok === true) {
+    //  if (response.ok === true) {
+    //      console.log(response.data);
           
-        window.location.href = "adm.html";
-     }
-     else
-         console.log("Status: ", response.status);
+    //     document.getElementById("#ct").innerHTML=response.content;
+    //  }
+    //  else
+    //      console.log("Status: ", response.status);
  };
 
  // получаем токен

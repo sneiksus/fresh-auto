@@ -9,6 +9,7 @@ namespace Back.Models
     public class EFContext : DbContext
     {
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Car> Cars { get; set; }
 
         public EFContext()
         {
