@@ -14,17 +14,14 @@ namespace Back.Controllers
 {
     public class AuthController : Controller
     {
+        [HttpPost]
         [Authorize]
-        public ContentResult GetLogin()
+        public IActionResult GetLogin()
         {
-            return new ContentResult
-            {
-                ContentType = "text/html",
-                StatusCode = (int)HttpStatusCode.OK,
-                Content = System.IO.File.ReadAllText(@"D:\projects\Freshauto\Back\Helpers\adm.txt")
-            };
+            return Ok();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult AddCar(Car car)
         {
             using(EFContext con = new EFContext())
@@ -35,6 +32,7 @@ namespace Back.Controllers
             }
         }
         [HttpGet]
+        [Authorize]
         public IEnumerable<Car> GetCars(Car car)
         {
             using (EFContext con = new EFContext())
@@ -43,7 +41,7 @@ namespace Back.Controllers
             }
         }
         [HttpPost]
-
+        [Authorize]
         public IActionResult DelCar(int num)
         {
             using (EFContext con = new EFContext())

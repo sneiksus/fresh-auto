@@ -45,9 +45,10 @@
             dataType: "json",
             success: function (response) {
                 $('#succes').show();
-                sessionStorage.setItem(tokenKey, response.access_token);
+                localStorage.setItem(tokenKey, response.access_token);
                 console.log(response.access_token);
-                getData();
+               // getData();
+               window.location="adm.html"
             },
             error: function (xhr, status) {
                 $('#wr').show();
