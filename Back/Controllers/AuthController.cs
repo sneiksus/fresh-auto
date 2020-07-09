@@ -14,6 +14,7 @@ namespace Back.Controllers
 {
     public class AuthController : Controller
     {
+
         [HttpPost]
         [Authorize]
         public IActionResult GetLogin()

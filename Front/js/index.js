@@ -40,14 +40,49 @@ $(function(){
 });
 	
 
-$(document).ready(function() { 
-	$("#menubtn").click(function() { 
-		if($('#menu').is(":hidden"))
-		$("#menu").show(1000); 
-		else
-		$("#menu").hide(1000);
-	}); 
-	$("#X").click(function(){
-		$("#menu").hide(1000);
-	})
-}); 
+window.onload = function(){  
+	$.ajax({
+			   url: "https://localhost:44369/User/GetCarsIndex",
+			   type: "GET",
+			   crossDomain: true,
+			   success: function (response) {
+				   show(response);
+			   }
+	});
+	function show(cars) {  
+   cars.forEach(element => {
+	  $('#list-car-index').append(
+				  `<div class="col-lg-4 car-item ">
+				  <img class="car-img " src="data:image/png;base64,${element.picture}" alt="car">
+				  <h3 class="car-header">${element.mark} ${element.model}</h3>
+				  <ul class=properties">
+					  <li class="prop-val">
+						  <i class="fa fa-calendar" aria-hidden="true"></i> ${element.year}
+					  </li>
+							  <li class="prop-val">
+								  <i class="fa fa-cogs" aria-hidden="true"></i> ${element.transmission}
+							  </li>
+					  <li class="prop-val">
+						  <i class="fa fa-bolt" aria-hidden="true"></i> ${element.power} кВт
+					  </li>
+				  </ul>
+					  <ul class=properties">
+					  <li class="prop-val">
+						  <i class='fa fa-tint'></i> ${element.fuel}
+					  </li>
+					  <li class="prop-val">
+						  <i class="fa fa-usd" aria-hidden="true"></i> ${element.price}
+					  </li>
+					  <li class="prop-val">
+						  <i class="fa fa-road" aria-hidden="true""></i> ${element.price} km
+					  </li>
+				  </ul>
+				  <a href="index.html" class="details">
+					  Деталі
+					  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+				  </a>
+			  </div>`);});
+	}
+   }
+
+
