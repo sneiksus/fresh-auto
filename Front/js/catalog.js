@@ -30,7 +30,13 @@ document.getElementById("load-else").addEventListener("click", e => {
     e.preventDefault();
     show(skipCars());
 });
-
+document.getElementById("reset").addEventListener("click", e => {
+    e.preventDefault();
+    document.getElementById("list-car-catalog").innerHTML="";
+    skip=0;
+    show(skipCars());
+    $('#load-else').show();
+});
 document.getElementById("select").addEventListener("click", e => {
 
     e.preventDefault();
@@ -41,7 +47,20 @@ document.getElementById("select").addEventListener("click", e => {
     var fuel = $('#fuel option:selected').text();
     var mark = $('#mark option:selected').text();
     carsReserve = cars;
-    
+    if(mark!='Марка')
+    carsReserve=carsReserve.filter(x => x.mark == mark);
+    if(fuel!='Паливо')
+    carsReserve=carsReserve.filter(x => x.fuel == fuel);
+    if(trans!='Коробка')
+    carsReserve=carsReserve.filter(x => x.trans == trans);
+
+    carsReserve=carsReserve.filter(x => Number(x.km) <= Number(max_km));
+    carsReserve=carsReserve.filter(x => Number(x.price) <= Number(max_price));
+    carsReserve=carsReserve.filter(x => Number(x.power) >= Number(min_pw));
+
+    document.getElementById("list-car-catalog").innerHTML="";
+    show(carsReserve);
+    $('#load-else').hide();
 });
 window.onload = function(){  
 	$.ajax({
@@ -50,14 +69,14 @@ window.onload = function(){
 			   crossDomain: true,
 			   success: function (response) {
                    cars=response;
-				   show(skipCars());
+				   show(skipCars(cars));
 			   }
 	});}
 	function show(cars) {  
    cars.forEach(function(element, index) {
        if(index%2!=0)
        return;
-       var first =  `<div id="" class="row catalog justify-content-end">
+       var first =  `<div class="row catalog justify-content-end">
        <div class="col-lg-4 car-item ">
        <img class="car-img " src="data:image/png;base64,${element.picture}" alt="car">
        <h3 class="car-header">${element.mark} ${element.model}</h3>
@@ -80,7 +99,7 @@ window.onload = function(){
                <i class="fa fa-usd" aria-hidden="true"></i> ${element.price}
            </li>
            <li class="prop-val">
-               <i class="fa fa-road" aria-hidden="true""></i> ${element.price} km
+               <i class="fa fa-road" aria-hidden="true""></i> ${element.km} km
            </li>
        </ul>
        <a href="index.html" class="details">

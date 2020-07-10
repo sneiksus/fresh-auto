@@ -21,6 +21,12 @@ namespace Back.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult sendMessage(string name, string phone, string email, string message)
+        {
+            return Ok();
+        }
+
         [HttpGet]
         public IEnumerable<Car> GetCarsCatalog()
         {
