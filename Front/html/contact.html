@@ -34,18 +34,18 @@
             <div class="col-lg-5">
               <h2 class="write">Напишіть нам</h2>
               <form id="frm" method="POST" action="https://localhost:44369/User/sendMessage">
-              <input class="contact-input" name="name" placeholder="Ім'я" type="text" >
-              <input class="contact-input" name="phone" placeholder="Телефон" type="text" >
-              <input class="contact-input" name="email" placeholder="Пошта" type="text" >
+              <input class="contact-input" required name="name" placeholder="Ім'я" type="text" >
+              <input class="contact-input" required name="phone" value="+380" pattern="^\+?3?8?(0[5-9][0-9]\d{7})$" placeholder="Телефон" type="tel" >
+              <input class="contact-input" name="email" placeholder="Пошта" type="email" >
            
             </div>
             <div class="col-lg-7">
-                <textarea class="msg-input" name="message" placeholder="Ваше повідомлення" ></textarea>  
+                <textarea class="msg-input" required minlength="20" maxlength="500" name="message" placeholder="Ваше повідомлення" ></textarea>  
             </div>           
         </div>
         <div class="row justify-content-end">
             <div class="col-lg-3">
-                <a href="#" onclick="document.getElementById('frm').submit()"  type="submit" type="button" class="send-msg">Відправити</a>
+                <input id="sender"  type="submit" value="Відправити" class="send-msg"></input>
             </div>
         </div>
     </form>

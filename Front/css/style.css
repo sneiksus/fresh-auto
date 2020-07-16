@@ -211,7 +211,7 @@ a:hover{
     font-family: Lato-medium;
     color: #969696;
     text-align: center;
-    margin-left: -3%;
+   
 
 }
 
@@ -227,6 +227,7 @@ a:hover{
 .p-first{
     font-family: Lato-bold;
     margin-top: 70px;
+    text-align: center;
     color: rgb(105, 105, 105);
     font-size: 23pt;
     margin-left: auto;
@@ -236,13 +237,14 @@ a:hover{
 .p-second{
     font-family: Lato-bold;
     color: black;
+    text-align: center;
     font-size: 40pt;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 50px;
 }
 
 .p-third{
     font-family: Lato-bold;
+    text-align: center;
     color: rgb(105, 105, 105);
     font-size: 23pt;
     margin-bottom: 60px;
@@ -300,9 +302,15 @@ footer p{
         font-size: 20pt;
     }
 
-     .car-item{
-        margin-left: 35px;
+    .car-item{
+        margin-left: 0px;
     }
+
+     .car-item:nth-child(odd){
+       margin-right: 25px;
+  
+    }
+  
     .second-header{
         font-size: 20pt;
     }
@@ -324,12 +332,7 @@ footer p{
         margin-left: 18px;
     }
 
-    .car-item:nth-child(odd){
-        margin-left: 100px;
-    }
-    .car-item:nth-child(4){
-        margin-left: 35px;
-    }
+   
     
 }
 
@@ -387,9 +390,7 @@ footer p{
     margin-left: 0px;
 }
 
-.second-header{
-    margin-left: 35%;
-}
+
 
 .all-cars{
     width: 250px;
@@ -404,17 +405,7 @@ footer p{
 
 }
 
-.p-first{
-    margin-left: 27%;
-}
 
-.p-third{
-    margin-left: 36%;
-}
-
-.p-second{
-    margin-left: 12%;
-}
 
 footer{
     height: auto;
@@ -435,21 +426,24 @@ footer h4{
 
 @media  (max-width: 767px) {
     header{
-        height: 180px;
+        height: 170px;
     }
      
     nav{
-        margin-top: 35px;
-        margin-left: -120px;
+        margin-top: 50px;
+    }
+    nav a:first-child{
+        margin-left: 0px;
+        font-size: 17px;
     }
     nav a{
-        margin-left: 37px;
-        font-size: 18px;
+        margin-left: 22px;
+        font-size: 17px;
     }
 
     nav a:last-child{
         padding-top: 30px;
-        font-size: 18px;
+        font-size: 17px;
     }
  
     .logo{
@@ -475,9 +469,7 @@ footer h4{
         margin-left: 10%;
     }
 
-    .second-header{
-         transform: translateX(0%);
-    }
+   
 
     .car-item{
         margin-left: auto;
@@ -497,9 +489,7 @@ footer h4{
 
     }
     
-    .second-header{
-        margin-left: 27%;
-    }
+ 
        
     .details{
         font-size: 17pt;
@@ -512,16 +502,10 @@ footer h4{
 
     .all-cars{
         width: 200px;
-        margin-left: 0px;
+    
     }
 
-    .p-first{
-        margin-left: 17%;
-    }
-
-    .p-third{
-        margin-left: 29%;
-    }
+ 
 
     footer{
         height: auto;
@@ -578,6 +562,10 @@ h2{
     border: 1px solid #3d72a4;
     padding-left: 5px;
     resize: none;
+}
+
+#sender{
+  border:none ;
 }
 
 .msg-input::placeholder{
@@ -904,7 +892,7 @@ option{
         transform: translateX(20%);
     }
     .service-icon{
-        margin-left: 0%;
+        margin-left: 40%;
     }
 }
 
@@ -1027,6 +1015,16 @@ option{
      background-color: #3d72a4;
 }
 
+#reset{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid black;
+     margin-left: 30px;
+     transform: translateY(21%);
+     text-align: center;
+}
+
 .menu{
     position: absolute;
      margin-left: -5%;
@@ -1036,7 +1034,7 @@ option{
 }
 
 .load-else{
-    right: 19%;
+    right: 18.5%;
     background-color: rgb(240, 240, 240);
     border: none;
     color: rgb(65,64,66);
@@ -1056,6 +1054,10 @@ option{
     display: none;
 }
 
+#list-car-catalog .car-item{
+    margin-left: 50px;
+}
+
 #menubtn{
     display: none;
     background-color: white;
@@ -1072,7 +1074,7 @@ option{
          z-index: 1010;
          background-color: rgb(250, 250, 250);
          height: 800px;
-         margin-top: -52px;
+         margin-top: -40px;
          margin-left: -13%;
          
          width: 320px;
@@ -1081,12 +1083,12 @@ option{
         display: block;
       }
 
-      .catalog-cars .car-item{
-          margin-right: -1000px;
+      #list-car-catalog .car-item:nth-child(odd){
+         left: -10%;
       }
 
       .load-else{
-          margin-right: 7%;
+          margin-left: 5%;
       }
       .sort{
         transform: translateY(-25px);
@@ -1115,7 +1117,11 @@ option{
         margin-right: 40px;
     }
     .load-else{
-        right: 25%;
+        right: 38%;
+    }
+    #reset{
+        transform: translate(200%, 70%);
+        
     }
 }
 
@@ -1125,19 +1131,25 @@ option{
         z-index: 1010;
         background-color: rgb(250, 250, 250);
         height: 748px;
-        margin-top: 2px;
+        margin-top: 11px;
         margin-left: -13%;       
         width: 320px;
    }
    #menubtn{
        display: block;
-       transform: translateY(50px);
+       transform: translate(-50px,30px);
      }
 
-     .catalog-cars .car-item{
-         margin-right: -1000px;
+     #list-car-catalog .car-item{
+         margin: 0px;
+         margin-top: 30px;
      }
-
+     #list-car-catalog .car-item:nth-child(odd){
+        margin-right: 25px;
+    }
+    #list-car-catalog .car-item:nth-child(even){
+        transform: translateX(-10%);
+    }
      .sort{
        transform: translateY(10px);
          margin-top: 0px;
@@ -1154,15 +1166,19 @@ option{
    }
 
    #X{
-       display: inline;
+       display: block;
        margin-left: 90%;
+       
+   }
+   #reset{
+       transform: translate(200%, -100%);
        
    }
    .slider{   
        width: 85%;
    }
    .load-else{
-       right: 32%;
+       right: 33%;
    }
 }
 
@@ -1172,19 +1188,25 @@ option{
         z-index: 1010;
         background-color: rgb(250, 250, 250);
         height: 718px;
-        margin-top: 32px;
+        margin-top: 35px;
         margin-left: -13%;       
         width: 320px;
    }
+   #reset{
+    transform: translate(200%, -100%);
+    
+}
    #menubtn{
        display: block;
        transform: translateY(50px);
      }
 
-     .catalog-cars .car-item{
-         margin-right: -1000px;
+     #list-car-catalog .car-item{
+         margin-right: 90px;
      }
-
+     #list-car-catalog .car-item:nth-child(even){
+        transform: translateX(-20%);
+    }
      .sort{
        transform: translateY(10px);
          margin-top: 0px;

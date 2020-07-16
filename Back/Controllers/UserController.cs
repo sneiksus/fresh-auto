@@ -26,6 +26,11 @@ namespace Back.Controllers
         {
             return Ok();
         }
+        [HttpPost]
+        public IActionResult sendOrder(string name, string phone, string email, string mark, string model, int year, string km, string fuel, int transmission, string comentar)
+        {
+            return Ok();
+        }
 
         [HttpGet]
         public IEnumerable<Car> GetCarsCatalog()
