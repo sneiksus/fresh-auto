@@ -10,10 +10,40 @@ $(document).ready(function() {
 	})
 }); 
 
+$(function(){
+	$(document).on("click",".car-img",function() {
+	  var i_path = $(this).attr('src');
+	  console.log(i_path);
+	  console.log(this);
+	  $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+	  $('#magnify').css({
+		  left: ($(document).width() - $('#magnify').outerWidth())/2,
+		  // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+			  top: ($(window).height() - $('#magnify').outerHeight())/2
+		});
+	  $('#overlay, #magnify').fadeIn('fast');
+	});
+	
+	$('body').on('click', '#close-popup, #overlay', function(event) {
+	  event.preventDefault();
+   
+	  $('#overlay, #magnify').fadeOut('fast', function() {
+		$('#close-popup, #magnify, #overlay').remove();
+	  });
+	});
+  });
+
+  $('.max-km').on('input', function () {
+	$(".max-km-view").text("Макс. пробіг: "+e.value);
+});
+
 var cars=null,carsReserve=null,skip=0;
 function skipCars(){
     if(cars.length==0)
+    {
+    $('#load-else').hide();
        return [];
+    }
     else
     {
         var res=cars.slice(skip, skip+6);
@@ -77,7 +107,7 @@ window.onload = function(){
        if(index%2!=0)
        return;
        var first =  `<div class="row catalog justify-content-end">
-       <div class="col-lg-4 car-item ">
+       <div class="col-lg-4 car-item  mb">
        <img class="car-img " src="data:image/png;base64,${element.picture}" alt="car">
        <h3 class="car-header">${element.mark} ${element.model}</h3>
        <ul class=properties">
@@ -99,18 +129,18 @@ window.onload = function(){
                <i class="fa fa-usd" aria-hidden="true"></i> ${element.price}
            </li>
            <li class="prop-val">
-               <i class="fa fa-road" aria-hidden="true""></i> ${element.km} km
+               <i class="fa fa-road" aria-hidden="true""></i> ${element.km} км
            </li>
        </ul>
-       <a href="index.html" class="details">
+       <a href="${element.url}" target="_blank" class="details">
            Деталі
            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
        </a>
    </div>`;
    var second;
    if(index < cars.length - 1)
-      second =`<div id="" class="row catalog justify-content-end">
-      <div class="col-lg-4 car-item ">
+      second =`
+      <div class="col-lg-4 car-item  mb">
       <img class="car-img " src="data:image/png;base64,${cars[index + 1].picture}" alt="car">
       <h3 class="car-header">${cars[index + 1].mark} ${cars[index + 1].model}</h3>
       <ul class=properties">
@@ -132,10 +162,10 @@ window.onload = function(){
               <i class="fa fa-usd" aria-hidden="true"></i> ${cars[index + 1].price}
           </li>
           <li class="prop-val">
-              <i class="fa fa-road" aria-hidden="true""></i> ${cars[index + 1].price} km
+              <i class="fa fa-road" aria-hidden="true""></i> ${cars[index + 1].km} км
           </li>
       </ul>
-      <a href="index.html" class="details">
+      <a href="${cars[index + 1].url}"  target="_blank" class="details">
           Деталі
           <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
       </a>
@@ -143,5 +173,6 @@ window.onload = function(){
    </div>`;
    else
    second = "</div>";
-	  $('#list-car-catalog').append(first+second)});
+    
+      $('#list-car-catalog').append(first+second)});
 	}

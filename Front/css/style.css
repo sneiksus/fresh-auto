@@ -209,7 +209,7 @@ a:hover{
     border: 1px solid rgb(240, 240, 240);
     font-size: 16pt;
     font-family: Lato-medium;
-    color: #969696;
+    color: #000000;
     text-align: center;
    
 
@@ -284,6 +284,10 @@ footer p{
 
 .f{
     color: white;
+}
+
+.con-ic{
+    margin-left: 10px;
 }
 
 
@@ -803,7 +807,7 @@ option{
     font-size: 13pt;
     font-family: Lato-light;
     color: #414042;
-    margin-left: 30px;
+    margin-left: 18px;
 }
 
 .prop-val:first-child{
@@ -973,6 +977,11 @@ option{
     overflow-x: auto;
 }
 
+.mb{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 .sel{
     background-color: white;
     width: 270px;
@@ -1021,7 +1030,7 @@ option{
     background-color: white;
     border: 1px solid black;
      margin-left: 30px;
-     transform: translateY(21%);
+     transform: translateY(20%);
      text-align: center;
 }
 
@@ -1054,6 +1063,10 @@ option{
     display: none;
 }
 
+#list-car-catalog{
+    margin-top: 50px;
+}
+
 #list-car-catalog .car-item{
     margin-left: 50px;
 }
@@ -1074,7 +1087,7 @@ option{
          z-index: 1010;
          background-color: rgb(250, 250, 250);
          height: 800px;
-         margin-top: -40px;
+         margin-top: -53px;
          margin-left: -13%;
          
          width: 320px;
@@ -1131,7 +1144,7 @@ option{
         z-index: 1010;
         background-color: rgb(250, 250, 250);
         height: 748px;
-        margin-top: 11px;
+        margin-top: 1px;
         margin-left: -13%;       
         width: 320px;
    }
@@ -1204,9 +1217,6 @@ option{
      #list-car-catalog .car-item{
          margin-right: 90px;
      }
-     #list-car-catalog .car-item:nth-child(even){
-        transform: translateX(-20%);
-    }
      .sort{
        transform: translateY(10px);
          margin-top: 0px;
@@ -1242,7 +1252,7 @@ option{
 
 .log-div{
   width: 300px;
-  height: 250px;
+  height: 300px;
   background-color: rgb(240, 240, 240);
   border: 1px solid rgb(19, 81, 238);
   margin-top: 200px;
@@ -1250,14 +1260,12 @@ option{
 
 .wrong{
     color: red;
+    margin-top: 10px;
 }
 
-.log-in{
-    height: 30px;
-    width: 100px;
-    background-color: rgb(0, 178, 238);
-    text-align: center;
-    color: black;
+#submitLogin{
+    width: 150px;
+    height: 50px;
 }
 
 .log-div *{
@@ -1283,10 +1291,9 @@ option{
 }
 
 .car-list-item a{
-    display: inline-block;
-    margin-left: 100px;
+   float: right;
     margin-top: 6px;
-    transform: translateY(20%);
+ 
 }
 
 .ht{

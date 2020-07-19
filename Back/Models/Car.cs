@@ -17,5 +17,7 @@ namespace Back.Models
         public int Price { get; set; }
         public int Power { get; set; }
         public int Km { get; set; }
+
+        public string Url { get; set; }
     }
 }

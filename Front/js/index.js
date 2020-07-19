@@ -1,19 +1,6 @@
-var header = $('.header'),
-	scrollPrev = 0;
-
-$(window).scroll(function() {
-	var scrolled = $(window).scrollTop();
- 
-	if ( scrolled > 100 && scrolled > scrollPrev ) {
-		header.addClass('out');
-	} else {
-		header.removeClass('out');
-	}
-	scrollPrev = scrolled;
-});
 
 $(function(){
-	$(".car-img").click(function(event) {
+	$(document).on("click",".car-img",function() {
 	  var i_path = $(this).attr('src');
 	  console.log(i_path);
 	  console.log(this);
@@ -52,7 +39,7 @@ window.onload = function(){
 	function show(cars) {  
    cars.forEach(element => {
 	  $('#list-car-index').append(
-				  `<div class="col-lg-4 car-item ">
+				  `<div class="col-lg-4 car-item">
 				  <img class="car-img " src="data:image/png;base64,${element.picture}" alt="car">
 				  <h3 class="car-header">${element.mark} ${element.model}</h3>
 				  <ul class=properties">
@@ -74,10 +61,10 @@ window.onload = function(){
 						  <i class="fa fa-usd" aria-hidden="true"></i> ${element.price}
 					  </li>
 					  <li class="prop-val">
-						  <i class="fa fa-road" aria-hidden="true""></i> ${element.price} km
+						  <i class="fa fa-road" aria-hidden="true""></i> ${element.km} км
 					  </li>
 				  </ul>
-				  <a href="index.html" class="details">
+				  <a href="${element.url}" target="_blank" class="details">
 					  Деталі
 					  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 				  </a>
