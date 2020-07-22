@@ -428,13 +428,13 @@ footer h4{
 }
 }
 
-@media  (max-width: 767px) {
+@media (min-width: 576px) and  (max-width: 767px) {
     header{
-        height: 170px;
+        height: 145px;
     }
      
     nav{
-        margin-top: 50px;
+        margin-top: 30px;
     }
     nav a:first-child{
         margin-left: 0px;
@@ -526,10 +526,69 @@ footer h4{
     footer h4{
         margin-left: 0px;
     }
-    
+ 
 }
 
+@media (max-width: 575px){
+    .header{
+        height: auto;
+    }
+    .first-header{
+        font-size: 25px;
+        margin: 0px;
+        margin-top: 70px;
+    }
+    .main-info{
+        height: 100%;
+        margin-top: 100px;
+      background-image: none;
+      background-color: #292929;
+    }
+    .logo{
+        width: 175px;
+        height: 60px;
+        margin-left: 50%;
+       transform: translateX(-50%);
+   }
+.main-descp{
+    font-size: 17px;
+    margin-left: 3px;
+}
+.second-header{
+    margin-top: 25px;
+    font-size: 17px;
+}
+.all-cars{
+    font-size: 17px;
+    height: auto;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.p-first{
+    font-size: 22px;
+}
+.p-second{
+    font-size: 27px;
+}
+.p-third{
+    font-size: 22px;
+    margin-top: 16px;
+}
+footer{
+    height: auto;
+}
 
+.marg-l-40{
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+nav a{
+    display: list-item;
+    margin-right: 40px;
+}
+}
 
 
 
@@ -1325,3 +1384,70 @@ option{
 .menubtn{
   display: none;
 }
+
+
+#expend {
+    display:none;  
+  }
+  
+  #expend + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+  }
+  
+  #expend:checked + .smalldesc {
+    max-height:250px;  
+  }
+  
+  label {
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  
+  label:hover {
+    text-decoration:none;  
+  }
+
+  .order-box{
+      width: 100%;
+      height: 250px;
+      border: 1px solid blue;
+      margin-top: 10px;
+      
+  }
+
+  .order-box .coler{
+   display: inline-block;
+ margin-left: 20px;
+}
+
+.order-controls{
+    float: right;
+    border-left: 1px solid rgb(0, 178, 238);
+    padding-left: 10px;
+    height: 100%;
+}
+.order-controls *{
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+#orders-list {
+  overflow-y: auto;
+  height: 550px;
+}
+
+#list-car{
+    overflow-y: auto;
+    height: 550px;
+  }
+
+  
+  #hdr{
+      display: inline;
+  }

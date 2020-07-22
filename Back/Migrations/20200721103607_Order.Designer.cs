@@ -2,14 +2,16 @@
 using Back.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Back.Migrations
 {
     [DbContext(typeof(EFContext))]
-    partial class EFContextModelSnapshot : ModelSnapshot
+    [Migration("20200721103607_Order")]
+    partial class Order
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,9 +84,6 @@ namespace Back.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<string>("Comentar")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Email")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");

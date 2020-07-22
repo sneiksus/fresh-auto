@@ -27,9 +27,16 @@ namespace Back.Controllers
             return Ok();
         }
         [HttpPost]
-        public IActionResult sendOrder(string name, string phone, string email, string mark, string model, int year, string km, string fuel, int transmission, string comentar)
+        public IActionResult sendOrder(Order order)
         {
-            return Ok();
+
+            using (EFContext con = new EFContext())
+            {
+                order.Status = "Нове";
+                con.Orders.Add(order);
+                con.SaveChanges();
+                return Ok();
+            }
         }
 
         [HttpGet]
