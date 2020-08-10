@@ -12,7 +12,7 @@ namespace Back.Helpers
         public const string ISSUER = "MyAuthServer"; 
         public const string AUDIENCE = "MyAuthClient";
         const string KEY = "gjhtkfs23fa2Rgh!";    
-        public const int LIFETIME = 1;  
+        public const int LIFETIME = 420;  
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
         {
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(KEY));

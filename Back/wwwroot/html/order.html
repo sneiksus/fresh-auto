@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173940775-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173940775-1');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fresh auto</title>
@@ -53,7 +61,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <input class="contact-input" required name="Name" maxlength="30" placeholder="Ім'я" type="text" >
-                    <input class="contact-input"required name="Phone" value="+380" pattern="^\+?3?8?(0[5-9][0-9]\d{7})$" maxlength="15" placeholder="Телефон" type="text" >
+                    <input class="contact-input" required name="Phone" value="+380" pattern="^\+?3?8?(0[5-9][0-9]\d{7})$" maxlength="15" placeholder="Телефон" type="text" >
                     <input class="contact-input" name="Email" maxlength="30" placeholder="Пошта" type="text" >
                     <input class="contact-input" required name="Mark" maxlength="30" placeholder="Марка" type="text" >
                     <input class="contact-input" required name="Model" maxlength="30" placeholder="Модель" type="text" >
@@ -61,7 +69,7 @@
                 </div>
                 <div class="col-lg-5">
                     <input class="contact-input" required name="Year" maxlength="4" placeholder="Рік випуску" type="text" >
-                    <input class="contact-input "required name="Km" maxlength="6" placeholder="Пробіг" type="text" >
+                    <input class="contact-input " required name="Km" maxlength="6" placeholder="Пробіг" type="text" >
                     <select class="contact-input" name="Fuel">
                         <option disabled selected hidden>Паливо</option>
                         <option>Бензин</option>
@@ -79,11 +87,11 @@
             </div>
             <div class="row justify-content-end">
                 <div class="col-lg-4">
-                    <input id="sender" type="submit" value="Відправити" class="send-order"></input>
+                    <input id="sender" type="submit" value="Відправити" class="send-order">
                 </div>
             </div>
+        </form>
         </div>
-    </form>
     </section>
     <footer>
         <div class="container">

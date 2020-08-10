@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173940775-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173940775-1');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <title>fresh auto</title>
@@ -63,9 +72,9 @@
                 <option class="opt">Kia</option>
                 <option class="opt">Land Rover</option>
 	            <option class="opt">Lexus</option>
-                <option class="opt"">Mazda</option>
+                <option class="opt">Mazda</option>
                 <option class="opt">Mercedes</option>
-                <option class="opt"">Mitsubishi</option>
+                <option class="opt">Mitsubishi</option>
                 <option class="opt">Nissan</option>
                 <option class="opt">Opel</option>
                 <option class="opt">Peugeot</option>
@@ -73,11 +82,11 @@
                 <option class="opt">Renault</option>
                 <option class="opt">Seat</option>
 	            <option class="opt">Skoda</option>
-	            <option class="opt"">Subaru</option>
-                <option class="opt"">Suzuki</option>
+	            <option class="opt">Subaru</option>
+                <option class="opt">Suzuki</option>
                 <option class="opt">Tesla</option>
-	            <option class="opt"">Toyota</option>
-                <option class="opt"">Volkswagen</option>
+	            <option class="opt">Toyota</option>
+                <option class="opt">Volkswagen</option>
                 <option class="opt">Volvo</option>
               </select>
             </div>
@@ -111,8 +120,8 @@
             <p class="param" >Мін. потужність: <output id="mpw"></output> кВт</p>
             <input class="slider" id="min-pw" oninput="mpw.value=this.value" type="range" min="50" max="400" step="5" value="50">
          </div>
-         <a type="button" id="select" class="send-msg">Обрати</a>   
-         <a type="button" id="reset" ><i class="fa fa-refresh fa-3x" aria-hidden="true"></i></a>   
+         <a type="button" href="#" id="select" class="send-msg">Обрати</a>   
+         <a type="button" href="#" id="reset" ><i class="fa fa-refresh fa-3x" aria-hidden="true"></i></a>   
         </div>
 
         <div id="list-car-catalog">

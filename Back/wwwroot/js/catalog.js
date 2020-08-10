@@ -136,7 +136,8 @@ window.onload = function(){
            Деталі
            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
        </a>
-   </div>`;
+   </div>
+   `;
    var second;
    if(index < cars.length - 1)
       second =`

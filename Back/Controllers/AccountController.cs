@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Back.Helpers;
 using Back.Models;
@@ -48,7 +50,19 @@ namespace Back.Controllers
             private ClaimsIdentity GetIdentity(string login, string password)
             {
                 EFContext db = new EFContext();
-                Admin person = db.Admins.FirstOrDefault(x => x.Login == login && x.Password == password);
+                StringBuilder Sb = new StringBuilder();
+
+                using (var hash = SHA256.Create())
+                {
+                    Encoding enc = Encoding.UTF8;
+                    Byte[] result = hash.ComputeHash(enc.GetBytes(password));
+
+                    foreach (Byte b in result)
+                        Sb.Append(b.ToString("x2"));
+                }
+
+                
+            Admin person = db.Admins.FirstOrDefault(x => x.Login == login && x.Password == Sb.ToString());
                 if (person != null)
                 {
                     var claims = new List<Claim>
