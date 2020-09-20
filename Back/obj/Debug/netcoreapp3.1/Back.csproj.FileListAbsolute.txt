@@ -2,7 +2,6 @@ D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\appsettings.json
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\Back.exe
-D:\projects\Freshauto\Back\obj\Debug\netcoreapp3.1\Back.csprojAssemblyReference.cache
 D:\projects\Freshauto\Back\obj\Debug\netcoreapp3.1\Back.AssemblyInfoInputs.cache
 D:\projects\Freshauto\Back\obj\Debug\netcoreapp3.1\Back.AssemblyInfo.cs
 D:\projects\Freshauto\Back\obj\Debug\netcoreapp3.1\Back.RazorTargetAssemblyInfo.cache
@@ -121,3 +120,4 @@ D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Proto
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\projects\Freshauto\Back\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\projects\Freshauto\Back\obj\Debug\netcoreapp3.1\Back.csprojAssemblyReference.cache

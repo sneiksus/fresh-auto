@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Back.Models;
 using Microsoft.AspNetCore.Http;
@@ -22,8 +24,18 @@ namespace Back.Controllers
         }
 
         [HttpPost]
-        public IActionResult sendMessage(string name, string phone, string email, string message)
+        public IActionResult sendMessage(string name, string phone, string email, string mes)
         {
+            MailAddress from = new MailAddress("contacte@freshauto.com.ua", "fresh auto");
+            MailAddress to = new MailAddress("sanekgalchyn@ukr.net");
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "Повідомлення з сайту";
+            m.Body = $"Новий запит з контактної форми\nІм'я: {name}\nТелефон: {phone}\nEmail: {email}\n\n{mes}";
+            SmtpClient smtp = new SmtpClient("sc", 25);
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential("contacte@freshauto.com.ua", "11111");
+            smtp.EnableSsl = false;
+            smtp.Send(m);
             return Ok();
         }
         [HttpPost]

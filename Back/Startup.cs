@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -66,6 +67,18 @@ namespace Back
             {
                 app.UseDeveloperExceptionPage();
             }
+            var options = new RewriteOptions()
+            .AddRedirect("(.*)/$", "$1")
+           .AddRewrite("catalog", "html/catalog.html", skipRemainingRules: false)
+            .AddRewrite("order", "html/order.html", skipRemainingRules: false)
+            .AddRewrite("service", "html/services.html", skipRemainingRules: false)
+             .AddRewrite("adm", "html/adm.html", skipRemainingRules: false)
+             .AddRewrite("login", "html/login.html", skipRemainingRules: false)
+              .AddRewrite("^$", "html/index.html", skipRemainingRules: false)
+                .AddRewrite("^$", "html/index.html", skipRemainingRules: false)
+            .AddRewrite("contact", "html/contact.html", skipRemainingRules: false)
+            .AddRedirectToHttpsPermanent();
+            app.UseRewriter(options);
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseHttpsRedirection();
             app.UseStaticFiles();
